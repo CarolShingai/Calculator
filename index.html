@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/index.js" type="module" defer></script>
+    <title>Calculator.js</title>
+  </head>
+  <body class="light-mode">
+    <main class="container">
+      <header>
+        <h1>Calculator.js</h1>
+        <div id="inputHead">
+          <button id="switchTheme" class="speacial-key">Switch Dark/Light</button>
+        </div>
+      </header>
+      <input type="text" id="input" />
+      <div id="keys" class="keys">
+        <button id="clear">Clear</button>
+        <button class="charKey" data-value=" ( ">(</button>
+        <button class="charKey" data-value=" ) ">)</button>
+        <button class="charKey" data-value=" / ">/</button>
+        <button class="charKey" data-value="7">7</button>
+        <button class="charKey" data-value="8">8</button>
+        <button class="charKey" data-value="9">9</button>
+        <button class="charKey" data-value=" * ">*</button>
+        <button class="charKey" data-value="4">4</button>
+        <button class="charKey" data-value="5">5</button>
+        <button class="charKey" data-value="6">6</button>
+        <button class="charKey" data-value=" - ">-</button>
+        <button class="charKey" data-value="1">1</button>
+        <button class="charKey" data-value="2">2</button>
+        <button class="charKey" data-value="3">3</button>
+        <button class="charKey" data-value=" + ">+</button>
+        <button class="charKey" data-value="0">0</button>
+        <button class="charKey" data-value=".">.</button>
+        <button class="charKey" data-value="%">Mod</button>
+        <button id="equal">=</button>
+      </div>
+      <section class="foot">
+        <button id="copy" class="speacial-key">Copy</button>
+        <input type="text" id="result" disabled="true" />
+      </section>
+    <main>
+  </body>
+</html>

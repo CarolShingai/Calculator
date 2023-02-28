@@ -1,0 +1,164 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.dark-mode{
+  --bg-color:#100f0ff8;
+  --primary-color: #292828;
+  --input-bg-color: rgba(24, 24, 24, 0.929);
+  --title-color: white;
+  --input-text-color: rgba(70, 167, 55, 0.929);
+  --bg-btn-first-color: transparent;
+  --bg-btn-second-color:#1e1d1ddc;
+  --btn-first-text-color: black;
+  --btn-second-text-color:rgba(192, 191, 191, 0.681);
+  --border-color: rgb(72, 72, 72);
+  --border-second-color: rgba(70, 167, 55, 0.929);
+  --specialBtn-bg-color:transparent;
+  --specialBtn-bg-second-color:#1e1d1ddc;
+  --border-third-color:rgb(4, 4, 215);
+  --border-forth-color:rgb(4, 4, 215);
+}
+
+.light-mode{
+  --bg-color:#eceefef8;
+  --primary-color: transparent;
+  --input-bg-color:#b1f7c2cc;
+  --title-color: black;
+  --input-text-color: rgba(24, 24, 24, 0.929);
+  --bg-btn-first-color: #6be489d1;
+  --bg-btn-second-color:#e7fff1dc;
+  --btn-first-text-color: black;
+  --btn-second-text-color:rgba(47, 47, 47, 0.847);
+  --border-color: transparent;
+  --border-second-color: rgba(70, 167, 55, 0.929);
+  --specialBtn-bg-color:rgb(48, 104, 189);
+  --specialBtn-bg-second-color:rgb(206, 219, 240);
+  --border-third-color: transparent;
+  --border-forth-color:rgb(4, 4, 215);
+}
+
+.error {
+  --input-text-color: rgb(236, 10, 10) ;
+}
+
+.dark-mode .sucess{
+  background-color: var(--border-third-color);
+  color: var(--btn-second-text-color);
+}
+
+.light-mode .sucess{
+  background-color: var(--specialBtn-bg-color);
+  color: black;
+}
+
+
+body{
+  background-color: var(--bg-color);
+  margin: 0;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+}
+
+header{
+  margin: 1.75 0 rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1{
+  margin-bottom: 1.75rem;
+  color: var(--title-color);
+}
+
+input{
+  border: none;
+  border-radius: .25rem;
+  height: 2rem;
+  font-size: 1.3rem;
+  color: var(--input-text-color);
+  width: 100%;
+  text-align: end;
+  background-color: var(--input-bg-color);
+}
+
+.container{
+  display: block;
+  background-color: var(--primary-color);
+  max-width: 35rem;
+  margin: 5rem auto 2rem;
+  position: relative;
+  padding: 1.5rem 2.5rem;
+}
+
+/* todos botões */
+#keys{
+  display: grid;
+  grid-template-columns: 
+  1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+  transition: 500ms;
+}
+
+#keys :hover{
+  border: solid .8px var(--border-second-color);
+  color: var(--btn-second-text-color);
+  background-color: var(--bg-btn-second-color);
+  box-shadow: 1px 1px 5px var(--border-second-color);
+}
+
+#keys button {
+  background-color: var(--bg-btn-first-color);
+  cursor: pointer;
+  padding: .9rem;
+  border: solid 2px var(--border-color);
+  font-weight: 500;
+  font-size: 1.5rem;
+  
+}
+
+button{
+  border-radius: .25rem;
+  color: var(--btn-first-text-color);
+}
+
+.speacial-key{
+  background-color: var(--specialBtn-bg-color);
+  border: solid 1px var(--border-third-color);
+  padding: .4rem .5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: 500ms;
+}
+
+.speacial-key:hover{
+  background-color: var(--specialBtn-bg-second-color);
+  color: var(--btn-second-text-color);
+  border: solid 1px var(--border-forth-color);
+}
+
+#copy{
+  margin-bottom: 1px;
+}
+
+.foot{
+  display: flex;
+}
+
+#result{
+  margin-left: 1rem;
+}
+
+@media (max-width: 460px){
+  header{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.7rem
+  }
+
+  #keys button{
+    padding: .6rem;
+  }
+}
